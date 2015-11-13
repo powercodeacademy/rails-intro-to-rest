@@ -9,9 +9,8 @@
 
 ## Notes
 
-What is REST - a simple URL Convention by Roy Fielding.
+They've seen rest in the sinatra case, but because HTML/CSS can only really do POST and GET we don't go into it super correctly. A reminder on what REST is and specifically the the routes that are created by default Rails.
 
-It's a complex idea but it's easy to understand if we simplifiy it a bit.
 
 Most of the web is about exposing data stored in applications.
 
