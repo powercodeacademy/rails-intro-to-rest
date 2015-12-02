@@ -27,3 +27,5 @@ the 7 restful routes 7 restful actions
 REST is a concept - not a technology. for right now, just think of it as standard URLS and HTTP verbs that describe what they are trying to do
 
 diagram that shows the mirroring of CRUD, to ROutes to controller Actions
+
+<a href='https://learn.co/lessons/rails-intro-to-rest' data-visibility='hidden'>View this lesson on Learn.co</a>
