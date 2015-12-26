@@ -73,7 +73,7 @@ So what do those 'GET', 'POST', et al items represent? Those are HTTP verbs that
 
 * **POST** - The POST method is used to send data enclosed in the request to the server. The server is expected to use this data to create some new resource.
 
-* **PATCH/PUT** - The PUT/PATCH methods both represent the HTTP verbs that manage data flow for updating resources.
+* **PATCH/PUT** - The PUT/PATCH methods both represent the HTTP verbs that are used to update existing resources. So if you sent a `PUT` to `/posts/1` with a new post name, the post with `id` of 1 would be updated.
 
 * **DELETE** - The DELETE method requests that the server delete the resource identified by the Request-URI. This means… it deletes the record, it's nice and explicit.
 
