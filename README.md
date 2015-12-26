@@ -25,18 +25,18 @@ For a real world case study let us pretend that you have a newsletter applicatio
 
 Rails has RESTful principles built into its core, so whether you are utilizing the built in view rendering system or using the application purely as an API you will have the tools necessary to follow standardized routing procedures.
 
-Let's take a look at a practical example of how this works. If you wanted to build out a Newsletter feature we would need the system to have four key actions: Create, Read, Update, and Destroy, more commonly known as CRUD actions. In addition to the CRUD actions we also will need an `index` page that lists out all of our newsletters. Since our users will need to have a visual interface for creating and updating records we will need a form element for capturing that data. Putting all of that together you will see that we end up with seven different routes. The `GET` routes are all routes that usually render some `erb` content. The `POST` and `PUT` are receivers of forms, and the `DELETE` is a new type of verb.
+Let's take a look at a practical example of how this works. If you wanted to build out a Newsletter feature we would need the system to have four key actions: Create, Read, Update, and Destroy, more commonly known as CRUD actions. In addition to the CRUD actions we also will need an `index` page that lists out all of our newsletters, that's five routes. Since our users will need to have a visual interface for creating and updating records a form for creating and another form for updating so two more routes. Putting all of that together you will see that we end up with seven different routes. The `GET` routes are all routes that usually render some `erb` content to a web browser. These are the routes that our users will work with day to day. The `POST` and `PUT` are the url in the `action` of forms, and the `DELETE` is a new type of verb.
 
 Here is a mapping of all of the different: route helpers, HTTP verbs, paths, and controller action mappings for our newsletter feature.
 
 ```ruby
-GET     /newsletters(.:format) 				# Show all newsletters         
-POST    /newsletters(.:format)          	# Create a new newsletter
-GET     /newsletters/new(.:format)      	# Render the form for creating a new newsletter
-GET     /newsletters/:id/edit(.:format) 	# Render the form for editing a newsletter
-GET     /newsletters/:id(.:format)      	# Show a single newsletter
-PATCH   /newsletters/:id(.:format)      	# Update a newsletter
-DELETE  /newsletters/:id(.:format)      	# Delete a newsletter
+GET     /newsletters 				# Show all newsletters         
+POST    /newsletters          	# Create a new newsletter
+GET     /newsletters/new      	# Render the form for creating a new newsletter
+GET     /newsletters/:id/edit 	# Render the form for editing a newsletter
+GET     /newsletters/:id      	# Show a single newsletter
+PATCH   /newsletters/:id      	# Update a newsletter
+DELETE  /newsletters/:id      	# Delete a newsletter
 ```
 
 Thankfully, rails maps these specific things to specific methods or "actions" as they are called in rails. If we had a controller called `NewsletterController` we would define these seven methods and rails automatically will call them based on the correct route. Below is a breakdown of each of the controller actions and what they represent, notice the direct corrolation between the route mapping above and the controller methods:
