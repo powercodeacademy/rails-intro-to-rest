@@ -8,35 +8,35 @@ If you have been building applications for a while, there is a good chance that 
 
 ## Example REST Workflow
 
-For a real world case study let us pretend that you have a newsletter application, the following is a high level view on how REST works in your app:
+For a real world case study let us pretend that you have a newsletter application. The following is a high level view on how REST works in your app:
 
 1. You fill out the form on the 'New Newsletter' page and click submit.
 
 2. Information about you, your newsletter content and any additional information such as media items are all sent to the application server.
 
-3. The server interprets the information, recognizes that the request is for a new newsletter and it generates the new record in the database and performs a myriad of background tasks (updates the newsletter counter, possibly sends notification emails, et al)
+3. The server interprets the information, recognizes that the request is for a new newsletter and it generates the new record in the database and performs a myriad of background tasks (updates the newsletter counter, possibly sends notification emails, et al.).
 
-4. Next the server sends a response back to the client, this does not necessarily mean that the newsletter was posted, the response could be that there was an error posting or something like that. However in this case we will say that the newsletter post went through properly, so the server sends a success message and tells the browser what page to go to and render. 
+4. Next the server sends a response back to the client; this does not necessarily mean that the newsletter was posted, the response could be that there was an error posting or something like that. However, in this case we will say that the newsletter post went through properly, so the server sends a success message and tells the browser what page to go to and render. 
 
-5. Lastly the browser receives the server information and gives the user feedback, in this case it shows you a message saying that your newsletter was successfully posted.
+5. Lastly the browser receives the server information and gives the user feedback. In this case, it shows the user a message saying that thier newsletter was successfully posted.
 
 
 ## RESTful Conventions in Rails
 
 Rails has RESTful principles built into its core, so whether you are utilizing the built in view rendering system or using the application purely as an API you will have the tools necessary to follow standardized routing procedures.
 
-Let's take a look at a practical example of how this works. If you wanted to build out a Newsletter feature we would need the system to have four key actions: Create, Read, Update, and Destroy, more commonly known as CRUD actions. In addition to the CRUD actions we also will need an `index` page that lists out all of our newsletters, that's five routes. Since our users will need to have a visual interface for creating and updating records a form for creating and another form for updating so two more routes. Putting all of that together you will see that we end up with seven different routes. The `GET` routes are all routes that usually render some `erb` content to a web browser. These are the routes that our users will work with day to day. The `POST` and `PUT` are the url in the `action` of forms, and the `DELETE` is a new type of verb.
+Let's take a look at a practical example of how this works. If you wanted to build out a Newsletter feature we would need the system to have four key actions: Create, Read, Update, and Destroy – commonly known as CRUD actions. In addition to the CRUD actions, we will also need an `index` page that lists out all of our newsletters – that's five routes. Since our users will need to have a visual interface for creating and updating records (a form for creating and another form for updating), we will need two more routes. Putting all of that together, you will see that we end up with seven different routes. The `GET` routes are all routes that usually render some `erb` content to a web browser. These are the routes that our users will work with day to day. The `POST` and `PUT` are the url in the form `action`, and the `DELETE` is a new type of verb.
 
-Here is a mapping of all of the different: route helpers, HTTP verbs, paths, and controller action mappings for our newsletter feature.
+Here is a mapping of all of the different route helpers, HTTP verbs, paths, and controller action mappings for our newsletter feature.
 
 ```ruby
-GET     /newsletters 				# Show all newsletters         
-POST    /newsletters          	# Create a new newsletter
-GET     /newsletters/new      	# Render the form for creating a new newsletter
-GET     /newsletters/:id/edit 	# Render the form for editing a newsletter
-GET     /newsletters/:id      	# Show a single newsletter
-PATCH   /newsletters/:id      	# Update a newsletter
-DELETE  /newsletters/:id      	# Delete a newsletter
+GET      /newsletters 				    	# Show all newsletters         
+POST    /newsletters          	 	 # Create a new newsletter
+GET      /newsletters/new        # Render the form for creating a new newsletter
+GET      /newsletters/:id/edit 	  # Render the form for editing a newsletter
+GET      /newsletters/:id      	   # Show a single newsletter
+PATCH  /newsletters/:id          # Update a newsletter
+DELETE /newsletters/:id          # Delete a newsletter
 ```
 
 Thankfully, rails maps these specific things to specific methods or "actions" as they are called in rails. If we had a controller called `NewsletterController` we would define these seven methods and rails automatically will call them based on the correct route. Below is a breakdown of each of the controller actions and what they represent, notice the direct corrolation between the route mapping above and the controller methods:
@@ -87,3 +87,5 @@ Below are a few keys to remember when thinking about REST:
 * RESTful routes have a clear mapping between the URL resource and the corresponding controller actions.
 
 * There are seven potential RESTful route options available.
+
+<a href='https://learn.co/lessons/rails-intro-to-rest' data-visibility='hidden'>View this lesson on Learn.co</a>
