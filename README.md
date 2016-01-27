@@ -14,11 +14,11 @@ For a real world case study let us pretend that you have a newsletter applicatio
 
 2. Information about you, your newsletter content and any additional information such as media items are all sent to the application server.
 
-3. The server interprets the information, recognizes that the request is for a new newsletter and it generates the new record in the database and performs a myriad of background tasks (updates the newsletter counter, possibly sends notification emails, et al.).
+3. The server interprets the information, recognizes that the request is for a new newsletter and it generates the new record in the database and performs a myriad of background tasks (updates the newsletter counter, possibly sends notification emails, et al).
 
 4. Next the server sends a response back to the client; this does not necessarily mean that the newsletter was posted, the response could be that there was an error posting or something like that. However, in this case we will say that the newsletter post went through properly, so the server sends a success message and tells the browser what page to go to and render. 
 
-5. Lastly the browser receives the server information and gives the user feedback. In this case, it shows the user a message saying that thier newsletter was successfully posted.
+5. Lastly the browser receives the server information and gives the user feedback. In this case it shows the user a message saying that their newsletter was successfully posted.
 
 
 ## RESTful Conventions in Rails
@@ -32,14 +32,14 @@ Here is a mapping of all of the different route helpers, HTTP verbs, paths, and 
 ```ruby
 GET      /newsletters 				    	# Show all newsletters         
 POST    /newsletters          	 	 # Create a new newsletter
-GET      /newsletters/new        # Render the form for creating a new newsletter
+GET    /newsletters/new        # Render the form for creating a new newsletter
 GET      /newsletters/:id/edit 	  # Render the form for editing a newsletter
-GET      /newsletters/:id      	   # Show a single newsletter
+GE    /newsletters/:id      	   # Show a single newsletter
 PATCH  /newsletters/:id          # Update a newsletter
 DELETE /newsletters/:id          # Delete a newsletter
 ```
 
-Thankfully, rails maps these specific things to specific methods or "actions" as they are called in rails. If we had a controller called `NewsletterController` we would define these seven methods and rails automatically will call them based on the correct route. Below is a breakdown of each of the controller actions and what they represent, notice the direct corrolation between the route mapping above and the controller methods:
+Thankfully, rails maps these specific things to specific methods or "actions" as they are called in rails. If we had a controller called `NewsletterController` we would define these seven methods and rails automatically will call them based on the correct route. Below is a breakdown of each of the controller actions and what they represent, notice the direct correlation between the route mapping above and the controller methods:
 
 ```ruby
 * index 	# Show all newsletters         
