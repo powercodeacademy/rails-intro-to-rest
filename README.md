@@ -34,7 +34,7 @@ GET      /newsletters 				    	# Show all newsletters
 POST    /newsletters          	 	 # Create a new newsletter
 GET    /newsletters/new        # Render the form for creating a new newsletter
 GET      /newsletters/:id/edit 	  # Render the form for editing a newsletter
-GE    /newsletters/:id      	   # Show a single newsletter
+GET    /newsletters/:id      	   # Show a single newsletter
 PATCH  /newsletters/:id          # Update a newsletter
 DELETE /newsletters/:id          # Delete a newsletter
 ```
@@ -88,4 +88,6 @@ Below are a few keys to remember when thinking about REST:
 
 * There are seven potential RESTful route options available.
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-intro-to-rest' title='Intro to REST'>Intro to REST</a> on Learn.co and start learning to code for free.</p>
+<a href='https://learn.co/lessons/rails-intro-to-rest' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-intro-to-rest'>Intro to Rest</a> on Learn.co and start learning to code for free.</p>
