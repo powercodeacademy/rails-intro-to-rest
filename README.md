@@ -2,7 +2,7 @@
 
 ## What is REST?
 
-In 2000, Roy Thomas Fielding was frustrated by the hap-hazard different ways web applications were using the HTTP standard. Specifically he was frustrated with how URLs and their corresponding HTTP Verbs were used differently for every single application. So, in his PhD dissertation he came up with REST or REpresentational State Transfer as a standard way web apps should structure their URLs. It also suggested a few other things, but we focus mostly on how it changed URLs. Fielding, also noticed the rise in web applications communicating with each other. Using this standard way of forming URLs to access resources, Fielding hoped that inter-application communication would get much easier.
+In 2000, Roy Thomas Fielding was frustrated by the hap-hazard different ways web applications were using the HTTP standard. Specifically he was frustrated with how URLs and their corresponding HTTP Verbs were used differently for every single application. So, in his PhD dissertation he came up with REST or REpresentational State Transfer as a standard way web apps should structure their URLs. It also suggested a few other things, but we focus mostly on how it changed URLs. Fielding also noticed the rise in web applications communicating with each other. Using this standard way of forming URLs to access resources, Fielding hoped that inter-application communication would get much easier.
 
 If you have been building applications for a while, there is a good chance that you have already worked with RESTful APIs. Integrating a Facebook login, having something in your application post to Twitter, pulling in a feed of images from Instagram, or even calling a list of locations from Google Maps are all examples of using a RESTful API to communicate between applications.
 
@@ -14,9 +14,9 @@ For a real world case study let us pretend that you have a newsletter applicatio
 
 2. Information about you, your newsletter content and any additional information such as media items are all sent to the application server.
 
-3. The server interprets the information, recognizes that the request is for a new newsletter and it generates the new record in the database and performs a myriad of background tasks (updates the newsletter counter, possibly sends notification emails, et al).
+3. The server interprets the information, recognizes that the request is for a new newsletter, and generates the new record in the database and performs a myriad of background tasks (updates the newsletter counter, possibly sends notification emails, et cetera).
 
-4. Next the server sends a response back to the client; this does not necessarily mean that the newsletter was posted, the response could be that there was an error posting or something like that. However, in this case we will say that the newsletter post went through properly, so the server sends a success message and tells the browser what page to go to and render. 
+4. Next the server sends a response back to the client. This does not necessarily mean that the newsletter was posted; the response could be that there was an error posting or something like that. However, in this case we will say that the newsletter post went through properly, so the server sends a success message and tells the browser what page to go to and render. 
 
 5. Lastly the browser receives the server information and gives the user feedback. In this case it shows the user a message saying that their newsletter was successfully posted.
 
@@ -51,7 +51,7 @@ Thankfully, rails maps these specific things to specific methods or "actions" as
 * destroy 	# Delete a newsletter
 ```
 
-Rails does a great job of integrating RESTful routes into their system, if you can understand routes in Rails you can understand REST in general. Going through the output above you should be able to see that all of the potential CRUD actions are all there, from querying all of the records to deleting a single item from the database, and all of the actions are wired up using RESTful routing nomenclature.
+Rails does a great job of integrating RESTful routes into their system. If you can understand routes in Rails you can understand REST in general. Going through the output above you should be able to see that all of the potential CRUD actions are all there, from querying all of the records to deleting a single item from the database, and all of the actions are wired up using RESTful routing nomenclature.
 
 Here is a diagram that shows how how the views, controller actions, routes, and HTTP verbs are all mapped together
 
@@ -75,7 +75,7 @@ So what do those 'GET', 'POST', et al items represent? Those are HTTP verbs that
 
 * **PATCH/PUT** - The PUT/PATCH methods both represent the HTTP verbs that are used to update existing resources. So if you sent a `PUT` to `/posts/1` with a new post name, the post with `id` of 1 would be updated.
 
-* **DELETE** - The DELETE method requests that the server delete the resource identified by the Request-URI. This means… it deletes the record, it's nice and explicit.
+* **DELETE** - The DELETE method requests that the server delete the resource identified by the Request-URI. This means… it deletes the record; it's nice and explicit.
 
 
 ## Summary
