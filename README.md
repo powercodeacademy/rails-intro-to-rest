@@ -55,7 +55,7 @@ Rails does a great job of integrating RESTful routes into its system. If you can
 
 Here is a diagram that shows how how the views, controller actions, routes, and HTTP verbs are all mapped together
 
-![REST Diagram](https://curriculum-content.s3.amazonaws.com/web-development/rails-intro-to-rest/rails_routes.png
+![REST Diagram](https://curriculum-content.s3.amazonaws.com/web-development/rails-intro-to-rest/rails_routes.png)
 
 In analyzing the diagram, you can see the flow of data as follows:
 
