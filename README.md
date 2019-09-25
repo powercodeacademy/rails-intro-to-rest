@@ -53,7 +53,7 @@ Thankfully, Rails maps these specific things to specific methods or "actions" as
 
 Rails does a great job of integrating RESTful routes into its system. If you can understand routes in Rails, you can understand REST in general. You should recognize all of the potential CRUD actions in the above table, from querying all of the records to deleting a single item from the database. All of the actions are wired up using RESTful routing nomenclature.
 
-Here is a diagram that shows how how the views, controller actions, routes, and HTTP verbs are all mapped together:
+Here is a diagram that shows how the views, controller actions, routes, and HTTP verbs are all mapped together:
 
 ![REST Diagram](https://curriculum-content.s3.amazonaws.com/web-development/rails-intro-to-rest/rails_routes.png)
 
