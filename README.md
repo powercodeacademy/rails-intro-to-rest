@@ -73,7 +73,7 @@ So what do `GET`, `POST`, et al. represent? Those are HTTP verbs that each give 
 
 * **POST** - The POST method is used to send data enclosed in the request to the server. The server is expected to use this data to create some new resource.
 
-* **PATCH/PUT** - The PUT/PATCH methods both represent the HTTP verbs that are used to update existing resources. So if you sent a `PUT` request to `/posts/1` with a new post name, the post with an `id` of 1 would be updated.
+* **PATCH/PUT** - The PUT/PATCH methods both represent the HTTP verbs that are used to update existing resources. Sending either a `PUT` or `PATCH` request to `/posts/1` will update the post with an `id` of 1. `PUT` is used when we want to replace an entire resource. `PATCH` is used when we want to update a specific part of a resource. Check out this [explanation of the difference between the two][put-v-patch].
 
 * **DELETE** - The DELETE method requests that the server delete the resource identified by the Request URI. This means… that it deletes the record. It's nice and explicit.
 
@@ -92,3 +92,5 @@ Below are a few keys to remember when thinking about REST:
 * RESTful routes have a clear mapping between the URL resource and the corresponding controller actions.
 
 * There are seven potential RESTful route options available.
+
+[put-v-patch]: https://blog.fullstacktraining.com/restful-api-design-post-vs-put-vs-patch/
