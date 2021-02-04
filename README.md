@@ -62,27 +62,24 @@ refer to the set of seven actions that RESTful apps potentially include:
   </tr>
   
   <tr>
-    <td>READ</td>
+    <td rowspan="2">READ</td>
     <td>Display a list of all newsletters</td>
   </tr>
   <tr>
-    <td></td>
     <td>Display an individual newsletter</td>
   </tr>
   <tr>
-    <td>CREATE</td>
+    <td rowspan="2">CREATE</td>
     <td>Display a form the user can use to enter information about a new newsletter</td>
   </tr>
   <tr>
-    <td></td>
     <td>Create the new newsletter instance</td>
   </tr>
   <tr>
-    <td>UPDATE</td>
+    <td rowspan="2">UPDATE</td>
     <td>Display a form the user can use to modify an existing newsletter</td>
   </tr>
   <tr>
-    <td></td>
     <td>Update the newsletter instance</td>
   </tr>
   <tr>
