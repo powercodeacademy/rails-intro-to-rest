@@ -29,27 +29,87 @@ Let's take a look at a practical example of how this works. If we want to build 
 
 Here is a mapping of all of the different route helpers, HTTP verbs, paths, and controller action mappings for our newsletter feature.
 
-| Method |        Action         |                  Description                  |
-|--------|-----------------------|-----------------------------------------------|
-| GET    | /newsletters 				 | Show all newsletters                          |
-| POST   | /newsletters          | Create a new newsletter                       |
-| GET    | /newsletters/new      | Render the form for creating a new newsletter |
-| GET    | /newsletters/:id/edit | Render the form for editing a newsletter      |
-| GET    | /newsletters/:id      | Show a single newsletter                      |
-| PATCH  | /newsletters/:id      | Update a newsletter                           |
-| DELETE | /newsletters/:id      | Delete a newsletter                           |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>Method</th>
+    <th>Action</th>
+    <th>Description</th>
+  </tr>
+
+  <tr>
+    <td>GET</td>
+    <td>/newsletters</td>
+    <td>Show all newsletters</td>
+  </tr>
+  <tr>
+    <td>POST</td>
+    <td>/newsletters</td>
+    <td>Create a new newsletter</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/newsletters/new</td>
+    <td>Render the form for creating a new newsletter</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/newsletters/:id/edit</td>
+    <td>Render the form for editing a newsletter</td>
+  </tr>
+  <tr>
+    <td>GET</td>
+    <td>/newsletters/:id</td>
+    <td>Show a single newsletter</td>
+  </tr>
+  <tr>
+    <td>PATCH</td>
+    <td>/newsletters/:id</td>
+    <td>Update a newsletter</td>
+  </tr>
+  <tr>
+    <td>DELETE</td>
+    <td>/newsletters/:id</td>
+    <td>Delete a newsletter</td>
+  </tr>
+</table>
 
 Thankfully, Rails maps these specific things to specific methods or "actions" as they are called in Rails. If we had a controller called `NewsletterController`, we would define these seven methods and Rails will call them automatically based on the correct route. Below is a breakdown of each of the controller actions and what it represents. Notice the direct correlation between the route mapping above and the controller methods:
 
-| Method  |                  Description                  |
-|---------|-----------------------------------------------|
-| index   | Show all newsletters                          |
-| create  | Create a new newsletter                       |
-| new     | Render the form for creating a new newsletter |
-| edit    | Render the form for editing a newsletter      |
-| show    | Show a single newsletter                      |
-| update  | Update a newsletter                           |
-| destroy | Delete a newsletter                           |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>Method</th>
+    <th>Description</th>
+  </tr>
+  
+  <tr>
+    <td>index</td>
+    <td>Show all newsletters</td>
+  </tr>
+  <tr>
+    <td>create</td>
+    <td>Create a new newsletter</td>
+  </tr>
+  <tr>
+    <td>new</td>
+    <td>Render the form for creating a new newsletter</td>
+  </tr>
+  <tr>
+    <td>edit</td>
+    <td>Render the form for editing a newsletter</td>
+  </tr>
+  <tr>
+    <td>show</td>
+    <td>Show a single newsletter</td>
+  </tr>
+  <tr>
+    <td>update</td>
+    <td>Update a newsletter</td>
+  </tr>
+  <tr>
+    <td>destroy</td>
+    <td>Delete a newsletter</td>
+  </tr>
+</table>
 
 Rails does a great job of integrating RESTful routes into its system. If you can understand routes in Rails, you can understand REST in general. You should recognize all of the potential CRUD actions in the above table, from querying all of the records to deleting a single item from the database. All of the actions are wired up using RESTful routing nomenclature.
 
