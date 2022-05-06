@@ -219,4 +219,4 @@ Below are a few keys to remember when thinking about REST:
 
 * There are seven potential RESTful route options available.
 
-[put-v-patch]: https://blog.fullstacktraining.com/restful-api-design-post-vs-put-vs-patch/
+[put-v-patch]: https://programmerspub.com/blog/general/difference-between-post-vs-put-vs-patch
