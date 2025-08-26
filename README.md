@@ -7,8 +7,8 @@ applications were using the HTTP standard. Specifically he was frustrated with
 how URLs and their corresponding HTTP verbs were used differently for every
 single application. So, in his PhD dissertation, he came up with REST
 (REpresentational State Transfer) as a standard way web apps should structure
-their URLs. His paper suggested a few other things, but we focus mostly on how
-it changed URLs. Fielding also noticed the rise in web applications
+their URLs. His paper suggested a few other things, but we will focus mostly
+on how it changed URLs. Fielding also noticed the rise in web applications
 communicating with each other. He hoped that inter-application communication
 would get much easier if there was a standard way of forming URLs to access
 resources.
@@ -32,13 +32,13 @@ application. The following is a high-level view of how such an app might work:
 3. The server interprets the information, recognizes that the request is for a
    new newsletter, generates the new record in the database, and performs myriad
    background tasks (updating the newsletter counter, possibly sending
-   notification emails, etc).
+  notification emails, etc.).
 
 4. Next, the server sends a response back to the client. This does not
-   necessarily mean that the newsletter was posted. The response could be that
-   there was an error posting or something like that. However, in this case we
-   will say that the newsletter post went through properly, so the server sends
-   a success message and tells the browser which page to go to and render.
+  necessarily mean that the newsletter was successfully posted. The response could be that
+  there was an error posting or something like that. However, in this case we
+  will say that the newsletter post went through properly, so the server sends
+  a success message and tells the browser which page to go to and render.
 
 5. Lastly, the browser receives the server information and gives the user
    feedback. In this case, it shows the user a message saying that their
@@ -60,7 +60,7 @@ refer to the set of seven actions that RESTful apps potentially include:
     <th>CRUD category</th>
     <th>Action(s)</th>
   </tr>
-  
+
   <tr>
     <td rowspan="2">READ</td>
     <td>Display a list of all newsletters</td>
@@ -211,7 +211,7 @@ Below are a few keys to remember when thinking about REST:
 
 * REST is an architectural design pattern, not a framework or code in itself.
   Many other web frameworks utilize RESTful design principles in some form or
-  another. By using RESTful principles, Rails apps are able to have a clear and
+  another. By using RESTful principles, Rails apps have a clear and
   standardized naming structure for routes and actions.
 
 * RESTful routes have a clear mapping between the URL resource and the
